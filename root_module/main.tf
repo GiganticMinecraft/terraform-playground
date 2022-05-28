@@ -16,6 +16,10 @@ resource "null_resource" "root_null_resource" {
   triggers = {
     always_run = "${timestamp()}"
   }
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 module "child_module" {
