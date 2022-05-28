@@ -26,5 +26,5 @@ resource "null_resource" "root_null_resource" {
 
 module "child_module" {
   depends_on = [ null_resource.root_null_resource ]
-  source  = "../child_module"
+  source  = "./child_module"
 }
