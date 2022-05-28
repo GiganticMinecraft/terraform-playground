@@ -13,6 +13,8 @@ provider "null" {
 }
 
 resource "null_resource" "root_null_resource" {
+  provider = null.null_1
+
   triggers = {
     always_run = "${timestamp()}"
   }
